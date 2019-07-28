@@ -1,0 +1,16 @@
+local Players = game:GetService("Players")
+local Player = Players.LocalPlayer
+
+local Frame = script.Parent:WaitForChild("Frame") 
+
+local Whitelisted = {"PLAYER1", "PLAYER2"} 
+
+for i,v in pairs(Whitelisted) do
+    if Player.Name == v then
+        Frame.Visible = true
+    else
+        Frame.Visible = false
+    end
+end
+
+--// Scripted By ProjectExtraction \\--
