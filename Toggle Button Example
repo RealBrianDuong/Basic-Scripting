@@ -1,0 +1,18 @@
+local Button = script.Parent
+local Debounce = false
+
+local Frame = Button.Parent:WaitForChild("Frame")
+
+Button.MouseButton1Click:Connect(function()
+	if Debounce == false then
+		Button.Text = "Close"
+		Frame.Visible = true
+		Debounce = true
+	else
+		Button.Text = "Open"
+		Frame.Visible = false
+		Debounce = false
+	end
+end)
+
+--// Scripted By ProjectExtraction \\--
