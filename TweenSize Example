@@ -1,0 +1,16 @@
+local Button = script.Parent
+local Frame = Button.Parent
+
+local Debounce = false
+
+Button.MouseButton1Click:Connect(function()
+	if Debounce == false then
+		Button.Text = "Close"
+		Frame:TweenSize(UDim2.new(0.5, 0, 0.5, 0), "Out", "Quad", 0.2, true)
+		Debounce = true
+	else
+		Button.Text = "Open"
+		Frame:TweenSize(UDim2.new(0, 0, 0, 0), "Out", "Quad", 0.2, true)
+		Debounce = false
+	end
+end)
